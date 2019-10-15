@@ -86,3 +86,45 @@ if (input === 'movie-this') {
           console.log("Album Name: " + data.tracks.items[0].album.name + "\n");
         });
       }
+
+      function concertThis(concert) {
+
+        var concertQuery = concert || "'The Sign' by Ace of Base"
+      
+        axios.get("https://rest.bandsintown.com/artists/" + concertQuery + "/events?app_id=codingbootcamp").then(function(response) {
+          var jsonData = response.data;
+          // console.log(jsonData);
+          for (var i = 0; i < jsonData.length; i++) {
+            var divider = "\n------------------------------------------------------------\n\n";
+            var concertFind = [
+              "\nVenue Name: " + jsonData[i].venue.name,
+              "\nLocation: " + jsonData[i].venue.city,
+              "\nDate of Concert: " + moment(jsonData[i].datetime).format("L"),
+            ].join("\n\n")
+            // console.log("THIS IS JSONDATA", jsonData[i].datetime);
+            
+            fs.appendFile("log.txt", concertFind + divider, function(err) {
+              if(err) throw err;
+              console.log(divider + concertFind);
+            });
+      
+              console.log(divider + concertFind);
+              //console.log(concertThis);
+          };
+            
+        });
+      };   
+
+
+
+      function doWhatItSays() {
+        fs.readFile("random.txt", "utf8", function (error, data) {
+            if (error) {
+                return console.log(error);
+            }
+            var dataArr = data.split(",");
+            command = dataArr[0];
+            query = dataArr[1];
+            spotifyThis();
+        });
+    };
