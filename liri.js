@@ -49,7 +49,6 @@ if (input === 'movie-this') {
     
     axios.get("http://www.omdbapi.com/?t=" + movieQuery + "&y=&plot=short&tomatoes=true&apikey=trilogy").then(function(response) {
       
-      var divider = "\n------------------------------------------------------------\n\n";
       var jsonData = response.data;
   
       if (jsonData.title != undefined) {
@@ -66,7 +65,7 @@ if (input === 'movie-this') {
         "Plot: " + jsonData.Plot,
         "Cast: " + jsonData.Actors,
       ].join("\n\n");
-      console.log(divider + movieData);
+      console.log("------------------------------------" + "\n" + movieData + "\n" + "------------------------------------");
     })};
 
 
