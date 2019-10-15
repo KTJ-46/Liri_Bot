@@ -42,32 +42,33 @@ if (input === 'movie-this') {
 
 
 
-  //function spotifyTrack(track) {
   
-    //console.log(track);
+  function movieThis(movie) {
+
+    var movieQuery = movie || "Mr. Nobody"
     
-      // spotify.search({ type: 'track', query: track }, function(err, response) {
-      //   if (err) {
-      //     return console.log('Error occurred: ' + err);
-      //   }
-        
-      //   var jsonData = response.tracks;
-      //   console.log(jsonData);
-        
-      //   for (var i = 0; i < 5; i++) {
-      //     var divider = "\n------------------------------------------------------------\n\n";
-      //     var trackInfo = [
-      //       "\nArtist: " + jsonData.items[i].artists[0].name,
-      //       "\nTrack Name: " + jsonData.items[i].name,
-      //       "\nAlbum Name: " + jsonData.items[i].album.name,
-      //       "\nPreview Track: " + jsonData.items[i].preview_url,
-      //     ]
-    
-      //     console.log(divider + trackInfo);
-      //   }
-          
-      // }
-      // )};
+    axios.get("http://www.omdbapi.com/?t=" + movieQuery + "&y=&plot=short&tomatoes=true&apikey=trilogy").then(function(response) {
+      
+      var divider = "\n------------------------------------------------------------\n\n";
+      var jsonData = response.data;
+  
+      if (jsonData.title != undefined) {
+      }
+      else {
+      }
+  
+      var movieData = [
+        "Title: " + jsonData.Title,
+        "Year: " + jsonData.Year,
+        "imdb Rating: " + jsonData.imdbRating,
+        "Country: " + jsonData.Country,
+        "Language: " + jsonData.Language,
+        "Plot: " + jsonData.Plot,
+        "Cast: " + jsonData.Actors,
+      ].join("\n\n");
+      console.log(divider + movieData);
+    })};
+
 
       function spotifyThis(Song){
 
