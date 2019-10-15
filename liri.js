@@ -55,17 +55,16 @@ if (input === 'movie-this') {
       }
       else {
       }
-  
-      var movieData = [
-        "Title: " + jsonData.Title,
-        "Year: " + jsonData.Year,
-        "imdb Rating: " + jsonData.imdbRating,
-        "Country: " + jsonData.Country,
-        "Language: " + jsonData.Language,
-        "Plot: " + jsonData.Plot,
-        "Cast: " + jsonData.Actors,
-      ].join("\n\n");
-      console.log("------------------------------------" + "\n" + movieData + "\n" + "------------------------------------");
+        console.log("----------------------------------------------------------");
+        console.log("Title: " + response.data.Title);
+        console.log("Year: " + response.data.Year);
+        console.log("IMDB Rating: " + response.data.Ratings[0].Value);
+        console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value);
+        console.log("Country: " + response.data.Country);
+        console.log("Language: " + response.data.Language);
+        console.log("Plot: " + response.data.Plot);
+        console.log("Actors: " + response.data.Actors);
+        console.log("----------------------------------------------------------");
     })};
 
 
