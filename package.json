@@ -1,0 +1,20 @@
+{
+  "name": "Liri_Bot",
+  "version": "1.0.0",
+  "description": "Creating a Node JS application to use language interpretation and provide results for songs and music bands using user input",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KTJ-46/Liri_Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KTJ-46/Liri_Bot/issues"
+  },
+  "homepage": "https://github.com/KTJ-46/Liri_Bot#readme"
+}
