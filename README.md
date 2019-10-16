@@ -11,9 +11,8 @@ It takes input from the user in the terminal after typing the command in a speci
 * for concert info.- type node liri.js concert-this <"band/artist name">
 * for random info.- type node liri. js do-what-it-says
 
-## Screenshots/Gif
-
-
+## Video Demonstration
+https://drive.google.com/file/d/16qUtD7v8vCH84akFCgOTTN2Kl-w0HcTh/view
 
 ## Link to deployed version
 https://ktj-46.github.io/Liri_Bot/
