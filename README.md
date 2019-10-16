@@ -17,4 +17,19 @@ It takes input from the user in the terminal after typing the command in a speci
 * for movie info.- type node liri.js movie-this <'movie name">
 * for concert info.- type node liri.js concert-this <"band/artist name">
 * for random info.- type node liri. js do-what-it-says
-__--------------------------------------------------------------------------------------------------------------------------__
+
+## Screenshots/Gif
+
+
+
+## Link to deployed version
+
+
+## Technologies Used
+* Javascript
+* Node JS
+* APIs- OMDB, Bands in Town
+* NPM packages- node-spotify-api, axios, fs, moment
+
+## Development
+This app was developed as a part of University of Richmond coding boot-camp. App was developed based on class exercises and using documentation from NPM website
