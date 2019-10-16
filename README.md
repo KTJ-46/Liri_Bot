@@ -16,3 +16,5 @@ It takes input from the user in the terminal after typing the command in a speci
 * for song info.- type node liri.js spotify-this <"song name">
 * for movie info.- type node liri.js movie-this <'movie name">
 * for concert info.- type node liri.js concert-this <"band/artist name">
+* for random info.- type node liri. js do-what-it-says
+_--------------------------------------------------------------------------------------------------------------------------_
