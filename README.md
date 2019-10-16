@@ -16,7 +16,7 @@ It takes input from the user in the terminal after typing the command in a speci
 
 
 ## Link to deployed version
-
+https://ktj-46.github.io/Liri_Bot/
 
 ## Technologies Used
 * Javascript
